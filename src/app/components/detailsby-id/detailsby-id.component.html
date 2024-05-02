@@ -1,0 +1,32 @@
+<div class="Loading" *ngIf="isloading">
+
+  <div class="spinner-border m-5" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+</div>
+
+
+
+<div class="container">
+  <mat-card class="example-card style">
+    <mat-card-header>
+      <!-- <div mat-card-avatar class="example-header-image"></div> -->
+      <mat-card-subtitle> ID: {{userDetails.data.id}}</mat-card-subtitle>
+
+      <mat-card-subtitle>First name : {{userDetails.data.first_name}} {{userDetails.data.last_name}}</mat-card-subtitle>
+      <mat-card-subtitle>Last name : {{userDetails.data.last_name}}</mat-card-subtitle>
+      <mat-card-subtitle> email : {{userDetails.data.email}}</mat-card-subtitle>
+
+    </mat-card-header>
+    <img mat-card-image [src]="userDetails.data.avatar" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <mat-card-actions>
+        <a class="btn btn-info" mat-button routerLink="/">back</a>
+      </mat-card-actions>
+
+    </mat-card-content>
+  </mat-card>
+
+
+</div>
